@@ -1,0 +1,12 @@
+- args:
+    sql: CREATE TABLE "boorran"."Orders"("id" text NOT NULL, "source" text, "orderNumber"
+      text, "staffId" uuid, "subTotal" numeric, "discount" numeric, "status" text,
+      "deliveryStatus" text, "paymentMethod" text, "deliveryPrice" numeric, "items"
+      jsonb NOT NULL, "customerDetail" jsonb, "grandTotal" numeric, PRIMARY KEY ("id")
+      , FOREIGN KEY ("staffId") REFERENCES "public"."Users"("id") ON UPDATE restrict
+      ON DELETE restrict, UNIQUE ("id"), UNIQUE ("orderNumber"));
+  type: run_sql
+- args:
+    name: Orders
+    schema: boorran
+  type: add_existing_table_or_view
