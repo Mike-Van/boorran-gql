@@ -1,0 +1,10 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ADD COLUMN "orderNumber" text
+  type: run_sql
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "orderNumber" DROP NOT NULL
+  type: run_sql
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ADD CONSTRAINT Orders_orderNumber_key UNIQUE
+      (orderNumber)
+  type: run_sql

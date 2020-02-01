@@ -1,0 +1,6 @@
+- args:
+    sql: alter table "boorran"."Orders" drop constraint "Orders_pkey";
+  type: run_sql
+- sql: "alter table \"boorran\".\"Orders\"\n    add constraint \"Orders_pkey\" \n
+    \   primary key ( \"id\" );"
+  type: run_sql
