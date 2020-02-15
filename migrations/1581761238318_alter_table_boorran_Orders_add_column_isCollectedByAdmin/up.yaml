@@ -1,0 +1,4 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ADD COLUMN "isCollectedByAdmin" boolean NULL
+      DEFAULT false;
+  type: run_sql

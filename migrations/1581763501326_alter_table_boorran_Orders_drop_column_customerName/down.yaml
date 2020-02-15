@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ADD COLUMN "customerName" text
+  type: run_sql
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "customerName" DROP NOT NULL
+  type: run_sql

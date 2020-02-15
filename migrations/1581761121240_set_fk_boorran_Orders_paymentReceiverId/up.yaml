@@ -1,0 +1,6 @@
+- args:
+    sql: "\n           alter table \"boorran\".\"Orders\"\n           add constraint
+      \"Orders_paymentReceiverId_fkey\"\n           foreign key (\"paymentReceiverId\")\n
+      \          references \"public\".\"Users\"\n           (\"id\") on update restrict
+      on delete restrict;\n      "
+  type: run_sql

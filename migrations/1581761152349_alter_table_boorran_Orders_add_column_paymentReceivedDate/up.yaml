@@ -1,0 +1,4 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ADD COLUMN "paymentReceivedDate" timestamptz
+      NULL;
+  type: run_sql

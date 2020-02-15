@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE ONLY "boorran"."Orders" ALTER COLUMN "source" SET DEFAULT 'shopify';
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Orders"."source" IS E''
+  type: run_sql
