@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "shopifyOrderId" TYPE numeric;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Orders"."shopifyOrderId" IS E''
+  type: run_sql

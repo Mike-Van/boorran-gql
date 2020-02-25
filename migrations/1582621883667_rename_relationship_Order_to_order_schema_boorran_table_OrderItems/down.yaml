@@ -1,0 +1,7 @@
+- args:
+    name: order
+    new_name: Order
+    table:
+      name: OrderItems
+      schema: boorran
+  type: rename_relationship

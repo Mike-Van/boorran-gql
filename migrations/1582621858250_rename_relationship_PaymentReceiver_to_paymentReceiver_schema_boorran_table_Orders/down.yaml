@@ -1,0 +1,7 @@
+- args:
+    name: paymentReceiver
+    new_name: PaymentReceiver
+    table:
+      name: Orders
+      schema: boorran
+  type: rename_relationship
