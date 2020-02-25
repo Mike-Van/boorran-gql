@@ -1,0 +1,3 @@
+- args:
+    sql: alter table "boorran"."Orders" add constraint "Orders_id_key" unique ("id");
+  type: run_sql

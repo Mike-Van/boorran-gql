@@ -1,0 +1,4 @@
+- args:
+    sql: alter table "boorran"."Orders" add constraint "Orders_shopifyOrderId_key"
+      unique ("shopifyOrderId");
+  type: run_sql
