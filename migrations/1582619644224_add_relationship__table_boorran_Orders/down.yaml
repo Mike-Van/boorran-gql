@@ -1,0 +1,6 @@
+- args:
+    relationship: paymentReceiver
+    table:
+      name: Orders
+      schema: boorran
+  type: drop_relationship

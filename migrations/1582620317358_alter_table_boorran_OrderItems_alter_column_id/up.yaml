@@ -1,0 +1,7 @@
+- args:
+    sql: ALTER TABLE "boorran"."OrderItems" ADD CONSTRAINT "OrderItems_id_key" UNIQUE
+      ("id")
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."OrderItems"."id" IS E''
+  type: run_sql

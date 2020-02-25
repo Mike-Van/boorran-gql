@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ADD COLUMN "items" jsonb
+  type: run_sql
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "items" DROP NOT NULL
+  type: run_sql

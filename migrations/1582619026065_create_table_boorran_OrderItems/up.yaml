@@ -1,0 +1,9 @@
+- args:
+    sql: CREATE TABLE "boorran"."OrderItems"("orderId" integer, "itemId" integer,
+      "itemTitle" text, "variantId" integer, "variantTitle" text, "quantity" integer,
+      "discount" numeric, "price" numeric, PRIMARY KEY ("orderId") );
+  type: run_sql
+- args:
+    name: OrderItems
+    schema: boorran
+  type: add_existing_table_or_view

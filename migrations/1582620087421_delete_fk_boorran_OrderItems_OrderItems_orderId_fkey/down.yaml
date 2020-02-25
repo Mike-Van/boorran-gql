@@ -1,0 +1,4 @@
+- args:
+    sql: alter table "boorran"."OrderItems" add foreign key ("orderId") references
+      "boorran"."Orders"("shopifyOrderId") on update restrict on delete restrict;
+  type: run_sql

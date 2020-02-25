@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "id" TYPE numeric;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Orders"."id" IS E'null'
+  type: run_sql

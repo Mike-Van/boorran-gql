@@ -1,0 +1,3 @@
+- args:
+    sql: DROP TABLE "boorran"."OrderItems"
+  type: run_sql

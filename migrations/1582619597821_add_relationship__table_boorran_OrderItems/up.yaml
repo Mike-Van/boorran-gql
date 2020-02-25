@@ -1,0 +1,8 @@
+- args:
+    name: Order
+    table:
+      name: OrderItems
+      schema: boorran
+    using:
+      foreign_key_constraint_on: orderId
+  type: create_object_relationship

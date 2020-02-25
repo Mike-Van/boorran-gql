@@ -1,0 +1,5 @@
+- args:
+    sql: "\n           alter table \"boorran\".\"Orders\"\n           add constraint
+      \"Orders_id_fkey\"\n           foreign key (\"id\")\n           references \"boorran\".\"OrderItems\"\n
+      \          (\"orderId\") on update restrict on delete restrict;\n      "
+  type: run_sql

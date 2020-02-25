@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "orderNumber" TYPE integer;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Orders"."orderNumber" IS E'null'
+  type: run_sql
+- args:
+    sql: alter table "boorran"."Orders" rename column "shopifyOrderNumber" to "orderNumber";
+  type: run_sql

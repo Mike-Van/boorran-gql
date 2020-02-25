@@ -1,0 +1,3 @@
+- args:
+    sql: alter table "boorran"."OrderItems" drop constraint "OrderItems_orderId_fkey";
+  type: run_sql
