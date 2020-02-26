@@ -1,0 +1,6 @@
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Orders"."tax" IS E''
+  type: run_sql
+- args:
+    sql: alter table "boorran"."Orders" rename column "tax" to "taxPrice";
+  type: run_sql
