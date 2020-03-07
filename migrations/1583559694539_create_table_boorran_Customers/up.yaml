@@ -1,0 +1,13 @@
+- args:
+    sql: CREATE EXTENSION IF NOT EXISTS pgcrypto;
+  type: run_sql
+- args:
+    sql: CREATE TABLE "boorran"."Customers"("id" uuid NOT NULL DEFAULT gen_random_uuid(),
+      "firstName" text NOT NULL, "lastName" text NOT NULL, "shopifyCustomerId" text
+      NOT NULL, "email" text NOT NULL, "phone" text NOT NULL, PRIMARY KEY ("id") ,
+      UNIQUE ("shopifyCustomerId"));
+  type: run_sql
+- args:
+    name: Customers
+    schema: boorran
+  type: add_existing_table_or_view

@@ -1,0 +1,6 @@
+- args:
+    relationship: orders
+    table:
+      name: Customers
+      schema: boorran
+  type: drop_relationship

@@ -1,0 +1,7 @@
+- args:
+    sql: ALTER TABLE "boorran"."Customers" ALTER COLUMN "shopifyCustomerId" DROP NOT
+      NULL;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Customers"."shopifyCustomerId" IS E''
+  type: run_sql

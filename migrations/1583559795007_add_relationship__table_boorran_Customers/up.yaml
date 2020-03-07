@@ -1,0 +1,12 @@
+- args:
+    name: orders
+    table:
+      name: Customers
+      schema: boorran
+    using:
+      foreign_key_constraint_on:
+        column: customerId
+        table:
+          name: Orders
+          schema: boorran
+  type: create_array_relationship
