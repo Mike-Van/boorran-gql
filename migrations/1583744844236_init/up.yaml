@@ -1,0 +1,316 @@
+- args:
+    allowlist: []
+    functions: []
+    query_collections: []
+    remote_schemas: []
+    tables:
+    - array_relationships:
+      - comment: null
+        name: orders
+        using:
+          foreign_key_constraint_on:
+            column: customerId
+            table:
+              name: Orders
+              schema: boorran
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships: []
+      select_permissions: []
+      table:
+        name: Customers
+        schema: boorran
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: order
+        using:
+          foreign_key_constraint_on: orderId
+      select_permissions: []
+      table:
+        name: OrderItems
+        schema: boorran
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: orderItems
+        using:
+          foreign_key_constraint_on:
+            column: orderId
+            table:
+              name: OrderItems
+              schema: boorran
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: customer
+        using:
+          foreign_key_constraint_on: customerId
+      - comment: null
+        name: paymentReceiver
+        using:
+          foreign_key_constraint_on: paymentReceiverId
+      - comment: null
+        name: staff
+        using:
+          foreign_key_constraint_on: staffId
+      select_permissions: []
+      table:
+        name: Orders
+        schema: boorran
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships: []
+      select_permissions:
+      - comment: null
+        permission:
+          allow_aggregations: true
+          columns:
+          - id
+          - type
+          - text
+          - value
+          - metadata
+          computed_fields: []
+          filter: {}
+        role: associate
+      - comment: null
+        permission:
+          allow_aggregations: true
+          columns:
+          - metadata
+          - text
+          - type
+          - value
+          - id
+          computed_fields: []
+          filter: {}
+        role: manager
+      table: Enums
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions:
+      - comment: null
+        permission:
+          check: {}
+          columns:
+          - id
+          - userId
+          - createdAt
+          - expiredAt
+          - metadata
+          set: {}
+        role: associate
+      - comment: null
+        permission:
+          check: {}
+          columns:
+          - metadata
+          - createdAt
+          - expiredAt
+          - id
+          - userId
+          set: {}
+        role: manager
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: user
+        using:
+          manual_configuration:
+            column_mapping:
+              userId: id
+            remote_table: Users
+      select_permissions:
+      - comment: null
+        permission:
+          allow_aggregations: true
+          columns:
+          - metadata
+          - createdAt
+          - expiredAt
+          - id
+          - userId
+          computed_fields: []
+          filter: {}
+        role: associate
+      - comment: null
+        permission:
+          allow_aggregations: true
+          columns:
+          - metadata
+          - createdAt
+          - expiredAt
+          - id
+          - userId
+          computed_fields: []
+          filter: {}
+        role: manager
+      table: Sessions
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: userSessions
+        using:
+          manual_configuration:
+            column_mapping:
+              id: userId
+            remote_table: Sessions
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions:
+      - comment: null
+        permission:
+          check: {}
+          columns:
+          - metadata
+          - email
+          - name
+          - phone
+          - pin
+          - role
+          - store
+          - id
+          set: {}
+        role: manager
+      is_enum: false
+      object_relationships: []
+      select_permissions:
+      - comment: null
+        permission:
+          allow_aggregations: false
+          columns:
+          - metadata
+          - email
+          - name
+          - phone
+          - pin
+          - role
+          - store
+          - id
+          computed_fields: []
+          filter: {}
+        role: associate
+      - comment: null
+        permission:
+          allow_aggregations: false
+          columns:
+          - metadata
+          - email
+          - name
+          - phone
+          - pin
+          - role
+          - store
+          - id
+          computed_fields: []
+          filter: {}
+        role: manager
+      table: Users
+      update_permissions:
+      - comment: null
+        permission:
+          columns:
+          - metadata
+          - email
+          - name
+          - phone
+          - pin
+          - role
+          - store
+          - id
+          filter: {}
+          set: {}
+        role: associate
+      - comment: null
+        permission:
+          columns:
+          - metadata
+          - email
+          - name
+          - phone
+          - pin
+          - role
+          - store
+          - id
+          filter: {}
+          set: {}
+        role: manager
+    version: 2
+  type: replace_metadata
