@@ -1,0 +1,7 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "refundDeliveryToStaff" DROP
+      DEFAULT;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Orders"."refundDeliveryToStaff" IS E''
+  type: run_sql

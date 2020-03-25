@@ -1,0 +1,7 @@
+- args:
+    sql: ALTER TABLE "boorran"."Orders" ALTER COLUMN "refundDeliveryToStaff" SET DEFAULT
+      'done'::text;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "boorran"."Orders"."refundDeliveryToStaff" IS E'null'
+  type: run_sql
