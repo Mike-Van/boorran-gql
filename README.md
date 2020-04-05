@@ -1,6 +1,8 @@
 # Boorran GQL
 This is the repo containing all the migrations file for deploying to a hasura instance hosted at [https://hasura.boorran.com](https://hasura.boorran.com).
 
+The droplet on Digital Ocean is created with [Hasura One Clik App](https://hasura.io/docs/1.0/graphql/manual/guides/deployment/digital-ocean-one-click.html#quickstart). So please refer to the link to check out the documentation.
+
 Use admin secret  `Boorran168` to access the console or running from local development environment.
 
 To run this repo locally:
